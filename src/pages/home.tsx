@@ -6,7 +6,6 @@ import SearchForm from "../components/SearchForm";
 import { getTopStarredRepos } from "../helper";
 
 const Home = () => {
-  const [username, setUsername] = useState("");
   const [submittedUsername, setSubmittedUsername] = useState("");
 
   const {
@@ -20,20 +19,9 @@ const Home = () => {
     error: reposError,
   } = useGitHubUserRepos(submittedUsername);
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (username.trim()) {
-      setSubmittedUsername(username.trim());
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white p-4">
-      <SearchForm
-        username={username}
-        setUsername={setUsername}
-        handleSearch={handleSearch}
-      />
+      <SearchForm setSubmittedUsername={setSubmittedUsername} />
 
       {(userLoading || reposLoading) && <p>Loading...</p>}
 
@@ -43,10 +31,10 @@ const Home = () => {
         </p>
       )}
 
-      {user && user?.status === "404" ? (
-        <p>User Not Found</p>
+      {user?.status === "404" ? (
+        <p className="text-red-500">User not found</p>
       ) : (
-        <User user={user} />
+        user && <User user={user} />
       )}
 
       {repos && repos.length > 0 && (
