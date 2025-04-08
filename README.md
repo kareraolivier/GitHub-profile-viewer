@@ -24,7 +24,15 @@ A simple, responsive React app that helps recruiters quickly search and view key
 
 ## Preview
 
+https://karera-git-hub-profile-viewer.vercel.app/
+![https://karera-git-hub-profile-viewer.vercel.app/](https://github.com/user-attachments/assets/4bd5fa14-6a48-4a08-912d-5abdc7a9abb7)
+
 ## Tech Stack
 
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+
+## How to run the project 
+- git clone `https://github.com/kareraolivier/GitHub-profile-viewer.git`
+- Navigate to the project: `npm install`
+- After run the project with: `npm run dev`
