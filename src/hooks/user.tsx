@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchGitHubUser } from "../api";
 
 export const useGitHubUser = (username: string) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
