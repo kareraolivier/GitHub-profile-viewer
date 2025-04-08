@@ -7,24 +7,26 @@ const Repository = ({ repo }: any) => {
       <div>
         <a
           className="text-green-600 font-semibold text-lg"
-          href={repo.html_url}
+          href={repo?.html_url}
           target="_blank"
         >
-          {repo.name}
+          {repo?.name}
         </a>
-        {repo.description && <p className="text-sm mt-1">{repo.description}</p>}
+        {repo?.description && (
+          <p className="text-sm mt-1">{repo?.description}</p>
+        )}
       </div>
       <div className="text-sm text-gray-500 dark:text-gray-400 mt-2 flex items-end flex-col">
         <span className="whitespace-nowrap" title="Stars">
-          {repo.stargazers_count} ⭐
+          {repo?.stargazers_count} ⭐
         </span>
         <span className="whitespace-nowrap" title="Forks">
-          {repo.forks_count} ⛓️‍💥
+          {repo?.forks_count} ⛓️‍💥
         </span>
-        {repo.language && (
+        {repo?.language && (
           <span className="whitespace-nowrap" title="Languages">
             {" "}
-            {repo.language} 💻
+            {repo?.language} 💻
           </span>
         )}
       </div>

@@ -4,17 +4,17 @@ const User = ({ user }: any) => {
       <div className="flex items-center gap-4">
         <img
           className="w-20 h-20 rounded-full"
-          src={user.avatar_url}
+          src={user?.avatar_url}
           alt="Avatar"
         />
         <div>
-          <h2 className="text-xl font-bold">{user.name || "No Name"}</h2>
-          <p>@{user.login}</p>
-          {user.location && <p>{user.location}</p>}
-          {user.bio && <p>{user.bio}</p>}
+          <h2 className="text-xl font-bold">{user?.name || "No Name"}</h2>
+          <p>@{user?.login}</p>
+          {user?.location && <p>{user?.location}</p>}
+          {user?.bio && <p>{user?.bio}</p>}
           <div className="flex gap-4 mt-2">
-            <span>Followers: {user.followers}</span>
-            <span>Following: {user.following}</span>
+            <span>Followers: {user?.followers}</span>
+            <span>Following: {user?.following}</span>
           </div>
           <a
             className="text-green-500 underline"
