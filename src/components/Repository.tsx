@@ -2,7 +2,7 @@ const Repository = ({ repo }: any) => {
   return (
     <div
       key={repo.id}
-      className="bg-white dark:bg-gray-800 p-4 rounded shadow flex justify-between gap-4"
+      className="bg-white dark:bg-zinc-800 p-4 rounded shadow flex justify-between gap-4"
     >
       <div>
         <a
@@ -16,7 +16,7 @@ const Repository = ({ repo }: any) => {
           <p className="text-sm mt-1">{repo?.description}</p>
         )}
       </div>
-      <div className="text-sm text-gray-500 dark:text-gray-400 mt-2 flex items-end flex-col">
+      <div className="text-sm text-zinc-500 dark:text-zinc-400 mt-2 flex items-end flex-col">
         <span className="whitespace-nowrap" title="Stars">
           {repo?.stargazers_count} ⭐
         </span>

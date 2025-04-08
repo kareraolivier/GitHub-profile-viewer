@@ -1,6 +1,6 @@
 const User = ({ user }: any) => {
   return (
-    <div className="bg-white dark:bg-gray-800 p-4 rounded shadow mb-6">
+    <div className="bg-white dark:bg-zinc-800 p-4 rounded shadow mb-6">
       <div className="flex items-center gap-4">
         <img
           className="w-20 h-20 rounded-full"
