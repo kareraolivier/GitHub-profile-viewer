@@ -5,7 +5,7 @@ import Repository from "../components/Repository";
 import SearchForm from "../components/SearchForm";
 import { getTopStarredRepos } from "../helper";
 
-const MAX_HISTORY = 8;
+const MAX_HISTORY = 5;
 
 const Home = () => {
   const [submittedUsername, setSubmittedUsername] = useState("");
@@ -44,7 +44,7 @@ const Home = () => {
     if (!submittedUsername) return;
 
     const cached = searchHistory.find(
-      (u) => u.login.toLowerCase() === submittedUsername.toLowerCase()
+      (user) => user.login.toLowerCase() === submittedUsername.toLowerCase()
     );
     if (cached) {
       setCachedUser(cached);
