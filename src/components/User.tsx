@@ -18,7 +18,7 @@ const User = ({ user }: any) => {
           </div>
           <a
             className="text-green-500 underline"
-            href={user.html_url}
+            href={user?.html_url}
             target="_blank"
             rel="noreferrer"
           >
