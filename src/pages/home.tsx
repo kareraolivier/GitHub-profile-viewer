@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useGitHubUser, useGitHubUserRepos } from "../hooks";
-import User from "../components/Usersss";
+import User from "../components/User";
 import Repository from "../components/Repository";
 import SearchForm from "../components/SearchForm";
 import { getTopStarredRepos } from "../helper";
